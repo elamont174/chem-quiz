@@ -1,0 +1,8 @@
+body {
+    background-color: lightblue;
+    background-image: url("assets/images/chem-bg.bmp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
