@@ -3,6 +3,11 @@
 font-family: 'Outfit', sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+}
 
 body {
     padding: 0;
@@ -29,6 +34,7 @@ max-width: 80%;
 background-color: rgba(225, 224, 231, 0.9);
 border-radius: 5px;
 padding: 10px;
+
 }
 
 .btngrid {
@@ -49,3 +55,20 @@ padding: 10px;
 }
 
 /*CORRECT AND WRONG BUTTON STYLING GO HERE*/
+
+.start-btn, .next-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+
+}
