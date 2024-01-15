@@ -1,4 +1,13 @@
+*, *::before, *::after {
+ box-sizing: border-box;
+font-family: 'Outfit', sans-serif;
+}
+
+
 body {
+    padding: 0;
+    margin: 0;
+    display: flex;
     background-image: url("../images/colourchem.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -6,8 +15,18 @@ body {
     position: relative;
     height: 100vh;
     font-family: 'Outfit', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     font-family: 'Outfit', sans-serif;
+}
+
+.container {
+width: 800px;
+max-width: 80%;
+background-color: rgba(225, 224, 231, 0.9);
+border-radius: 5px;
+padding: 10px;
 }
