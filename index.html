@@ -8,6 +8,7 @@
         <meta name="keywords" content="GCSE, chemistry, combined science, quiz, multiple choice, easy, revision">
         <!--CSS stylesheet-->
         <link rel="stylesheet" href="assets/css/style.css">
+
         <!--favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io_chem/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io_chem/favicon-32x32.png">
@@ -28,19 +29,27 @@
 
         <!--Main Content-->
         <main>
-        <div class="gamearea">
-            <div id="question">Question</div>
-            <div id="answers">
+        
+         <div class="container">
+            <div id="question-container" class="hide">
+              <div id="question">Question</div>
+              <div id="answers" class="btngrid">
                 <button id="aone">Answer One</button>
                 <button id="atwo">Answer Two</button>
                 <button id="athree">Answer Three</button>
                 <button id="afour">Answer Four</button>
+              </div>
             </div>
-        </div>
+          <div class="controls">
+            <button id="start_btn" class="start_btn btn">Start Quiz!</button> 
+          </div>
+         </div>
         </main>
+
         <!--Footer-->
         <footer>
 
         </footer>
+        <script src="assets/js/script.js"></script>
     </body>
     </html>
