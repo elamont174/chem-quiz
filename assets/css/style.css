@@ -30,3 +30,22 @@ background-color: rgba(225, 224, 231, 0.9);
 border-radius: 5px;
 padding: 10px;
 }
+
+.btngrid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: gray;
+}
+
+/*CORRECT AND WRONG BUTTON STYLING GO HERE*/
