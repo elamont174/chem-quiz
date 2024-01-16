@@ -9,6 +9,8 @@ header {
     max-width: 100vw;
 }
 
+
+
 body {
     padding: 0;
     margin: 0;
@@ -19,6 +21,7 @@ body {
     background-size: cover;
     position: relative;
     height: 100vh;
+    width: 100vw;
     font-family: 'Outfit', sans-serif;
     justify-content: center;
     align-items: center;
@@ -37,7 +40,7 @@ padding: 10px;
 
 }
 
-.btngrid {
+.btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
@@ -54,7 +57,12 @@ padding: 10px;
     border-color: gray;
 }
 
-/*CORRECT AND WRONG BUTTON STYLING GO HERE*/
+.btn.correct {
+
+
+}
+
+.btn.wrong {}
 
 .start-btn, .next-btn {
     font-size: 1.2rem;
