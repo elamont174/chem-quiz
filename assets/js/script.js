@@ -1,7 +1,7 @@
 //Opening screen functions
 
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
     modal.style.display = "none";
@@ -20,9 +20,15 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const questionNumber = document.getElementById('questionno')
+const finalScoreContainer = document.getElementById('final-score')
 
 let shuffledQuestions, currentQuestionIndex
-let max_number_of_questions = 10
+const maxNumberOfQuestions = 10
+let currentQuestionNumberCount = 0
+let finalScoreCount = 0
+let finalScorePercentage = 0
+
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -45,6 +51,8 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+    currentQuestionNumberCount++
+    questionNumber.innerText = currentQuestionNumberCount
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
         const button = document.createElement('button')
@@ -52,8 +60,13 @@ function showQuestion(question) {
         button.classList.add('btn')
         if (answer.correct) {
             button.dataset.correct = answer.correct
+            
         }
-        button.addEventListener('click', selectAnswer)
+        if (maxNumberOfQuestions === currentQuestionNumberCount) {
+            console.log('end of game')
+        } else {
+            button.addEventListener('click', selectAnswer)
+        }
         answerButtonsElement.appendChild(button)
     })
 
@@ -69,7 +82,13 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
+    console.log(correct)
+    if (correct && correct!==undefined) {
+        finalScoreCount++;
+        console.log(finalScoreCount)
+    }
+    
+    //setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
