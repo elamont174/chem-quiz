@@ -62,11 +62,11 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct
             
         }
-        if (maxNumberOfQuestions === currentQuestionNumberCount) {
-            console.log('end of game')
-        } else {
+        //if (maxNumberOfQuestions === currentQuestionNumberCount) {
+        //    console.log('end of game')
+        //} else {
             button.addEventListener('click', selectAnswer)
-        }
+        //}
         answerButtonsElement.appendChild(button)
     })
 
@@ -92,7 +92,7 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (maxNumberOfQuestions > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Retake quiz!'
