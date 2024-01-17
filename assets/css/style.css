@@ -10,7 +10,6 @@ header {
 }
 
 
-
 body {
     padding: 0;
     margin: 0;
@@ -54,18 +53,15 @@ padding: 10px;
 }
 
 .btn:hover {
-    border-color: gray;
+    border-color: royalblue;
 }
 
 .btn.correct {
-
-
+    background-color: rgb(2, 204, 92);
 }
 
-.btn.wrong {}
-
-.start-btn, .next-btn {
-    font-size: 1.2rem;
+.start-btn {
+    font-size: 3rem;
     font-weight: bold;
     padding: 10px 20px;
 }
