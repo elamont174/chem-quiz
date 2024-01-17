@@ -29,9 +29,27 @@
 
         <!--Main Content-->
         <main>
+
+        <!--Opening modal screen-->
+    
+        <div id="myModal" class="modal">
         
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Welcome to Chem Quiz!</h1>
+                <p>This quiz is designed to help you practise for your Chemistry exam</p>
+                <p>You should aim to get 70% on this quiz</p>
+                <p>If you get less than 70% then retake the quiz at the end</p>
+                <p>Happy revising!</p>
+            </div>
+        
+        </div>
+        
+         <!--Main quiz area-->
          <div class="container">
             <div id="question-container" class="hide">
+              Question `${currentQuestionIndex}`
               <div id="question">Question</div>
               <div id="answer-buttons" class="btn-grid">
                 <button class="btn">Answer One</button>
@@ -44,6 +62,15 @@
             <button id="start-btn" class="start-btn btn">Start Quiz!</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
           </div>
+         </div>
+
+         <!--End screen area-->
+
+         <div class="container">
+            <div id="end-screen" class="hide">
+
+            </div>
+
          </div>
         </main>
 
