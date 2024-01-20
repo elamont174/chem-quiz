@@ -9,6 +9,8 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 - As a repeat user, I would want different questions and/or shuffled questions
 
 ## Features
+### Opening Modal Screen
+
 
 ## Technologies used
 
@@ -21,14 +23,14 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 
 ## Design
 - Leonardo AI was used to create a Chemistry themed background:
-![AI generated image showing 3 shelves of science glassware containing colourful liquids](img src="assets/images/colourchem.jpg")
+![AI generated image showing 3 shelves of science glassware containing colourful liquids](assets/images/colourchem.jpg)
 
 - A grey background was used for the question container to provide contrast to the text. A neutral colour was used for a clean look.
 
 - The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dysleixa and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen.
 
 ### Wireframes
-![Wireframe for ChemQuiz](img src="assets/images/chemquiz-wireframe.png")
+![Wireframe for ChemQuiz](assets/images/chemquiz-wireframe.png)
 
 ## Testing
 
