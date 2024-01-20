@@ -17,6 +17,7 @@ window.onclick = function (event) {
 
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const restartButton = document.getElementById('restart-btn');
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -39,6 +40,7 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 
 })
+restartButton.addEventListener('click', restartGame)
 
 function startGame() {
     startButton.classList.add('hide')
@@ -107,11 +109,8 @@ function selectAnswer(e) {
 
 function goToEndScreen(){
     endScreenContainer.classList.remove('hide')
-    startButton.innerText = 'Retake quiz?';
-    startButton.classList.remove('hide');
     correctAnswerTally.innerText = finalScoreCount
     finalPercentageGrade.innerText = ((finalScoreCount/10)*100)
-
 }
 
 function setStatusClass(element, correct) {
@@ -126,6 +125,16 @@ function setStatusClass(element, correct) {
     function clearStatusClass(element) {
         element.classList.remove('correct')
         element.classList.remove('wrong')
+    }
+
+    function restartGame(){
+        endScreenContainer.classList.add('hide')
+        let questionNumber = 0;
+        let currentQuestionIndex = 0;
+        let currentQuestionNumberCount = 0;
+        let finalScoreCount = 0;
+        let finalScorePercentage = 0;
+        startGame()
     }
 
 const questions = [
