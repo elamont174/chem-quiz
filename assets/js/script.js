@@ -91,9 +91,9 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+    const wrong = selectedButton.dataset.wrong
     if (correct && correct!==undefined) {
         finalScoreCount++;
-        console.log(finalScoreCount)
     }
     
     setStatusClass(document.body, correct)
