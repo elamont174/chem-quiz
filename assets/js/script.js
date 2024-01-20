@@ -44,6 +44,7 @@ restartButton.addEventListener('click', restartGame)
 
 function startGame() {
     startButton.classList.add('hide')
+    nextButton.classList.remove('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
@@ -71,15 +72,14 @@ function showQuestion(question) {
         //} else {
             button.addEventListener('click', selectAnswer)
         //}
-        console.log(answerButtonsElement)
         answerButtonsElement.appendChild(button)
-        console.log(answerButtonsElement)
+        nextButton.disabled = true
     })
 
 }
 
 function resetState() {
-    nextButton.classList.add('hide')
+    //nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
         currentQuestionIndex = 0;
@@ -102,7 +102,8 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct)
     })
     if (maxNumberOfQuestions > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
+        //nextButton.classList.remove('hide')
+        nextButton.disabled = false
     } else {
         goToEndScreen()
     }
@@ -136,6 +137,7 @@ function setStatusClass(element, correct) {
         currentQuestionNumberCount = 0;
         finalScoreCount = 0;
         finalScorePercentage = 0;
+        nextButton.classList.add('hide')
         startGame()
     }
 
