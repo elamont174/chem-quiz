@@ -10,7 +10,26 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 
 ## Features
 ### Opening Modal Screen
+- When you first enter the site, a modal button appears with the 'rules' of the quiz. 
+- There is an 'x' button to direct users to close the screen but clicking anywhere on the page will cause the screen to close. 
+- This screen will not be revisited unless the user revisits/refreshes the page.
+- ![Screenshot of opening screen](assets/images/open-screen.webp)
 
+### Start button
+- After closing the opening screen, the user will see a large button which says "Start Quiz!" 
+- Clicking this button will start the quiz.
+- ![Screenshot of start button](assets/images/start-button.webp)
+  
+### The questions
+- A box appears containing the question, 4 answer buttons and a 'next' button. 
+- The question number (out of 10) is displayed at the top of the box and this number increases as the questions are answered.
+- The 'next' button is disabled until an answer is pressed. 
+- The questions are shuffled each time the quiz is played and a random selection of 10 out of a bank of 20 are shown. 
+- ![Screenshot of unanswered question](assets/images/full-screen.webp)
+- When an answer is pressed: the correct answer will change to green, the wrong answers will change to red and the 'next' button will no longer be disabled.
+- ![Screenshot of answered question](assets/images/question-answered.webp)
+- Clicking the next button will set another question until 10 questions have been answered.
+- 
 
 ## Technologies used
 

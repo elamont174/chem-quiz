@@ -68,10 +68,7 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct
             
         }
-        //if (maxNumberOfQuestions === currentQuestionNumberCount) {
-        //} else {
             button.addEventListener('click', selectAnswer)
-        //}
         answerButtonsElement.appendChild(button)
         nextButton.disabled = true
     })
@@ -79,7 +76,6 @@ function showQuestion(question) {
 }
 
 function resetState() {
-    //nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
         currentQuestionIndex = 0;
@@ -102,7 +98,6 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct)
     })
     if (maxNumberOfQuestions > currentQuestionIndex + 1) {
-        //nextButton.classList.remove('hide')
         nextButton.disabled = false
     } else {
         goToEndScreen()
@@ -110,7 +105,6 @@ function selectAnswer(e) {
 }
 
 function goToEndScreen(){
-    questionContainerElement.classList.add('hide') 
     endScreenContainer.classList.remove('hide')
     correctAnswerTally.innerText = finalScoreCount
     finalPercentageGrade.innerText = ((finalScoreCount/10)*100)
