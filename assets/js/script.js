@@ -58,6 +58,7 @@ function showQuestion(question) {
     currentQuestionNumberCount++
     questionNumber.innerText = currentQuestionNumberCount
     questionElement.innerText = question.question
+    answerButtonsElement.textContent = ''
     question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
@@ -70,7 +71,9 @@ function showQuestion(question) {
         //} else {
             button.addEventListener('click', selectAnswer)
         //}
+        console.log(answerButtonsElement)
         answerButtonsElement.appendChild(button)
+        console.log(answerButtonsElement)
     })
 
 }
@@ -128,11 +131,11 @@ function setStatusClass(element, correct) {
 
     function restartGame(){
         endScreenContainer.classList.add('hide')
-        let questionNumber = 0;
-        let currentQuestionIndex = 0;
-        let currentQuestionNumberCount = 0;
-        let finalScoreCount = 0;
-        let finalScorePercentage = 0;
+       questionNumber.innerText = 0;
+        currentQuestionIndex = 0;
+        currentQuestionNumberCount = 0;
+        finalScoreCount = 0;
+        finalScorePercentage = 0;
         startGame()
     }
 
