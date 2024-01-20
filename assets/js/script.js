@@ -51,7 +51,6 @@ function startGame() {
 }
 
 function setNextQuestion() {
-    resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
@@ -68,7 +67,6 @@ function showQuestion(question) {
             
         }
         //if (maxNumberOfQuestions === currentQuestionNumberCount) {
-        //    console.log('end of game')
         //} else {
             button.addEventListener('click', selectAnswer)
         //}
@@ -108,6 +106,7 @@ function selectAnswer(e) {
 }
 
 function goToEndScreen(){
+    questionContainerElement.classList.add('hide') 
     endScreenContainer.classList.remove('hide')
     correctAnswerTally.innerText = finalScoreCount
     finalPercentageGrade.innerText = ((finalScoreCount/10)*100)
