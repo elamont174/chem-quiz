@@ -79,10 +79,10 @@ function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-        let currentQuestionIndex = 0;
-        let currentQuestionNumberCount = 0;
-        let finalScoreCount = 0;
-        let finalScorePercentage = 0
+        currentQuestionIndex = 0;
+        currentQuestionNumberCount = 0;
+        finalScoreCount = 0;
+        finalScorePercentage = 0
     }
 }
 
