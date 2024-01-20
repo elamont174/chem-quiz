@@ -22,6 +22,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const questionNumber = document.getElementById('questionno')
 const finalScoreContainer = document.getElementById('final-score')
+const endScreenContainer = document.getElementById('end-screen')
 
 let shuffledQuestions, currentQuestionIndex
 const maxNumberOfQuestions = 10
@@ -76,28 +77,36 @@ function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        let currentQuestionIndex = 0;
+        let currentQuestionNumberCount = 0;
+        let finalScoreCount = 0;
+        let finalScorePercentage = 0
     }
 }
 
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    console.log(correct)
     if (correct && correct!==undefined) {
         finalScoreCount++;
         console.log(finalScoreCount)
     }
     
-    //setStatusClass(document.body, correct)
+    setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
     if (maxNumberOfQuestions > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Retake quiz!'
-        startButton.classList.remove('hide')
+        goToEndScreen()
     }
+}
+
+function goToEndScreen(){
+    endScreenContainer.classList.remove('hide')
+    startButton.innerText = 'Retake quiz!';
+    startButton.classList.remove('hide');
 }
 
 //CHANGE RETAKE QUIZ BUTON TO GO TO FINAL FEEDBACK PAGE
