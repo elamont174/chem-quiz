@@ -30,6 +30,8 @@ let currentQuestionNumberCount = 0
 let finalScoreCount = 0
 let finalScorePercentage = 0
 
+let correctAnswerTally = document.getElementById('final-score')
+let finalPercentageGrade = document.getElementById('final-percentage')
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -105,11 +107,12 @@ function selectAnswer(e) {
 
 function goToEndScreen(){
     endScreenContainer.classList.remove('hide')
-    startButton.innerText = 'Retake quiz!';
+    startButton.innerText = 'Retake quiz?';
     startButton.classList.remove('hide');
-}
+    correctAnswerTally.innerText = finalScoreCount
+    finalPercentageGrade.innerText = ((finalScoreCount/10)*100)
 
-//CHANGE RETAKE QUIZ BUTON TO GO TO FINAL FEEDBACK PAGE
+}
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
