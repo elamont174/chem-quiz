@@ -1,5 +1,7 @@
 # Chem Quiz
+
 The purpose of ChemQuiz is for GCSE Chemistry students to revise for their exams by completing a short multiple choice quiz. They would be encouraged to repeat the quiz if they received less than 70%. It is designed for Secondary school students in England.
+![Image of website on different responsive screens](assets/images/chemquiz-responsive.png)
 
 The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/).
 
@@ -29,7 +31,9 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 - When an answer is pressed: the correct answer will change to green, the wrong answers will change to red and the 'next' button will no longer be disabled.
 - ![Screenshot of answered question](assets/images/question-answered.webp)
 - Clicking the next button will set another question until 10 questions have been answered.
-- 
+- Once 10 questions have been answered, the results box will pop up showing the user's final score and percentage. If the user received less than 70% they are encouraged to repeat the quiz. 
+- A 'Restart Quiz?' button will appear which will restart the quiz.
+- ![End-screen pop-up](assets/images/end-screen.png)  
 
 ## Technologies used
 
@@ -68,10 +72,10 @@ The live link to ChemQuiz can be found [here](https://elamont174.github.io/chem-
 There is currently only one quiz with a bank of 20 questions (each quiz shows a random selection of 10 of these questions). If this project was to be expanded, there would be multiple pages with quizzes for each topic. The bank of questions would also be expanded to cover more of the subject area. The user would also be able to create a username and password to save their scores for each quiz. 
 
 ## Credits
-[Leonardo AI](https://leonardo.ai/) was used to generate the background image.
-[Web Dev Simplified](https://www.youtube.com/@WebDevSimplified), [Invention Tricks](https://www.youtube.com/watch?v=WHHYz8rZmDU), [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY) and [Code Explained](https://www.youtube.com/watch?v=49pYIMygIcU) had helpful videos that I referenced when building my quiz.
-[W3schools](https://www.w3schools.com/howto/howto_css_modals.asp) was used to create the modal window opening screen.
-[ChatGPT](https://chat.openai.com/) was used to put the questions into the data correct format.
+- [Leonardo AI](https://leonardo.ai/) was used to generate the background image.
+- [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified), [Invention Tricks](https://www.youtube.com/watch?v=WHHYz8rZmDU), [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY) and [Code Explained](https://www.youtube.com/watch?v=49pYIMygIcU) had helpful videos that I referenced when building my quiz.
+- [W3schools](https://www.w3schools.com/howto/howto_css_modals.asp) was used to create the modal window opening screen.
+- [ChatGPT](https://chat.openai.com/) was used to put the questions into the data correct format.
 
 ## Acknowledgements
 - [Juliia Konovalova](https://github.com/IuliiaKonovalova) has been an absolutely invaluable pillar of support as my mentor. 
