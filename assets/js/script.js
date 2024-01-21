@@ -122,7 +122,7 @@ function setStatusClass(element, correct) {
 
     function restartGame(){
         endScreenContainer.classList.add('hide');
-       questionNumber.innerText = 0;
+        questionNumber.innerText = 0;
         currentQuestionIndex = 0;
         currentQuestionNumberCount = 0;
         finalScoreCount = 0;
