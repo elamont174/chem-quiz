@@ -59,7 +59,7 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 ![Wireframe for ChemQuiz](assets/images/chemquiz-wireframe.png)
 
 ## Testing
-Please refer to the 
+Please refer to the [TESTING.md file](TESTING.md).
 
 ## Deployment
 The site was deployed to GitHub pages from CodeAnywhere. This is done as follows:

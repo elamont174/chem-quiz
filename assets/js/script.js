@@ -1,4 +1,5 @@
-//Opening screen functions
+/* jshint esversion:8 */
+//OPENING SCREEN
 
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
@@ -11,129 +12,126 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};
 
-//Quiz functions
+//QUIZ
 
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
 const restartButton = document.getElementById('restart-btn');
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-const questionNumber = document.getElementById('questionno')
-const finalScoreContainer = document.getElementById('final-score')
-const endScreenContainer = document.getElementById('end-screen')
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
+const questionNumber = document.getElementById('questionno');
+const endScreenContainer = document.getElementById('end-screen');
 
-let shuffledQuestions, currentQuestionIndex
-const maxNumberOfQuestions = 10
-let currentQuestionNumberCount = 0
-let finalScoreCount = 0
-let finalScorePercentage = 0
+let shuffledQuestions, currentQuestionIndex;
+const maxNumberOfQuestions = 10;
+let currentQuestionNumberCount = 0;
+let finalScoreCount = 0;
+let finalScorePercentage = 0;
 
-let correctAnswerTally = document.getElementById('final-score')
-let finalPercentageGrade = document.getElementById('final-percentage')
+let correctAnswerTally = document.getElementById('final-score');
+let finalPercentageGrade = document.getElementById('final-percentage');
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
+    currentQuestionIndex++;
+    setNextQuestion();
 
-})
-restartButton.addEventListener('click', restartGame)
+});
+restartButton.addEventListener('click', restartGame);
+
+//FUNCTIONS
+//Starting the game
 
 function startGame() {
-    startButton.classList.add('hide')
-    nextButton.classList.remove('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    questionContainerElement.classList.remove('hide')
-    setNextQuestion()
+    startButton.classList.add('hide');
+    nextButton.classList.remove('hide');
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    questionContainerElement.classList.remove('hide');
+    setNextQuestion();
 }
 
 function setNextQuestion() {
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showQuestion(question) {
-    currentQuestionNumberCount++
-    questionNumber.innerText = currentQuestionNumberCount
-    questionElement.innerText = question.question
-    answerButtonsElement.textContent = ''
+    currentQuestionNumberCount++;
+    questionNumber.innerText = currentQuestionNumberCount;
+    questionElement.innerText = question.question;
+    answerButtonsElement.textContent = '';
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
             
         }
-            button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-        nextButton.disabled = true
-    })
+            button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+        nextButton.disabled = true;
+    });
 
-}
-
-function resetState() {
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-        currentQuestionIndex = 0;
-        currentQuestionNumberCount = 0;
-        finalScoreCount = 0;
-        finalScorePercentage = 0
-    }
 }
 
 function selectAnswer(e) {
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
-    const wrong = selectedButton.dataset.wrong
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
     if (correct && correct!==undefined) {
         finalScoreCount++;
     }
     
-    setStatusClass(document.body, correct)
+    setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        setStatusClass(button, button.dataset.correct);
+    });
     if (maxNumberOfQuestions > currentQuestionIndex + 1) {
-        nextButton.disabled = false
+        nextButton.disabled = false;
     } else {
-        goToEndScreen()
+        goToEndScreen();
     }
 }
 
+//End (results) screen 
+
 function goToEndScreen(){
-    endScreenContainer.classList.remove('hide')
-    correctAnswerTally.innerText = finalScoreCount
-    finalPercentageGrade.innerText = ((finalScoreCount/10)*100)
+    endScreenContainer.classList.remove('hide');
+    correctAnswerTally.innerText = finalScoreCount;
+    finalPercentageGrade.innerText = ((finalScoreCount/10)*100);
 }
 
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
            }
     }
     
     function clearStatusClass(element) {
-        element.classList.remove('correct')
-        element.classList.remove('wrong')
+        element.classList.remove('correct');
+        element.classList.remove('wrong');
     }
 
+    //Restart Game
+
     function restartGame(){
-        endScreenContainer.classList.add('hide')
+        endScreenContainer.classList.add('hide');
        questionNumber.innerText = 0;
         currentQuestionIndex = 0;
         currentQuestionNumberCount = 0;
         finalScoreCount = 0;
         finalScorePercentage = 0;
-        nextButton.classList.add('hide')
-        startGame()
+        nextButton.classList.add('hide');
+        startGame();
     }
+
+    //Questions dataset
 
 const questions = [
     {
