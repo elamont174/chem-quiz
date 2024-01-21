@@ -33,7 +33,9 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 - Clicking the next button will set another question until 10 questions have been answered.
 - Once 10 questions have been answered, the results box will pop up showing the user's final score and percentage. If the user received less than 70% they are encouraged to repeat the quiz. 
 - A 'Restart Quiz?' button will appear which will restart the quiz.
-- ![End-screen pop-up](assets/images/end-screen.png)  
+- ![End-screen pop-up](assets/images/end-screen.png)
+- On smaller screens, the questions display in one column for better readability. 
+- ![Small screen question example screenshot](assets/images/media-query.png)
 
 ## Technologies used
 
@@ -50,12 +52,14 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 
 - A grey background was used for the question container to provide contrast to the text. A neutral colour was used for a clean look.
 
-- The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dyslexia and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen.
+- The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dyslexia and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen. 
+![Example of Outfit font](assets/images/outfit-font.png)
 
 ### Wireframes
 ![Wireframe for ChemQuiz](assets/images/chemquiz-wireframe.png)
 
 ## Testing
+Please refer to the 
 
 ## Deployment
 The site was deployed to GitHub pages from CodeAnywhere. This is done as follows:
