@@ -16,6 +16,12 @@
 - JavaScript was tested using the official [JShint validator](https://jshint.com/) and passed:
 ![JavaScript validator screenshot](assets/images/jshint.png)
 
+## Lighthouse
+- Lighthouse was used via devtools to analyse the accessibility of the quiz:
+- Both mobile and desktop versions received the same score:
+![Lighthouse Mobile screenshot](assets/images/lighthouse-mobile.png) 
+
+
 ### Bugs
 1. When the quiz restarted, there was a bug causing the question number to continue to climb (e.g. 11/10, 12/10 and so on). I had reset the questionNumber to 0 but needed to set questionNumber.innerText to 0 instead. 
 2. Initially, I chose to hide the 'Next' button when the questions were displayed to prevent the user being able to skip questions. This meant that when the next button did appear, that the question would move up on the page creating an uncomfortable user experience. I changed the Next button so that it was 'disabled' instead. 
