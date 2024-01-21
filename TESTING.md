@@ -1,6 +1,8 @@
 # Testing
 
 - I tested that the website works on Chrome and Microsoft Edge.
+![Screenshot of Chrome running quiz](assets/images/chrome-compatibility.png)
+![Screenshot of Edge running quiz](assets/images/edge-compatibility.png)
 - I used devtools to check the responsiveness; I also checked this on the deployed site with my personal desktop computer and mobile phone.
 
 ## HTML validator
@@ -21,6 +23,10 @@
 - Both mobile and desktop versions received the same score:
 ![Lighthouse Mobile screenshot](assets/images/lighthouse-mobile.png) 
 
+## Responsive Viewer
+- The Google chrome extension "Responsive Viewer" was used to take the following screenshots, testing responsiveness:
+![Screenshot of Responsive viewer for smaller screens and tablet](assets/images/chemquiz-responsive2.png)
+![Screenshot of Responsive viewer for laptop](assets/images/chemquiz-responsive3.png)
 
 ### Bugs
 1. When the quiz restarted, there was a bug causing the question number to continue to climb (e.g. 11/10, 12/10 and so on). I had reset the questionNumber to 0 but needed to set questionNumber.innerText to 0 instead. 
