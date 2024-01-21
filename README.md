@@ -3,7 +3,8 @@
 The purpose of ChemQuiz is for GCSE Chemistry students to revise for their exams by completing a short multiple choice quiz. They would be encouraged to repeat the quiz if they received less than 70%. It is designed for Secondary school students in England.
 ![Image of website on different responsive screens](assets/images/chemquiz-responsive.png)
 
-The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/).
+The live site can be accessed via this [link](https://elamont174.github.io/chem-quiz/).
+The GitHub repositroy can be accessed [here](https://github.com/elamont174/chem-quiz).
 
 ## User Stories
 - As a first time user, I would want to test my initial knowledge by completing the quiz.
