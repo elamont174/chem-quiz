@@ -84,3 +84,4 @@ There is currently only one quiz with a bank of 20 questions (each quiz shows a 
 
 ## Acknowledgements
 - [Juliia Konovalova](https://github.com/IuliiaKonovalova) has been an absolutely invaluable pillar of support as my mentor. 
+- The Code Institute Slack community helped me switch over to GitPod when CodeAnywhere crashed the day before my deadline. Forever grateful!
