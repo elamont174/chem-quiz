@@ -16,6 +16,7 @@ window.onclick = function (event) {
 
 //QUIZ
 
+//Variables
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const restartButton = document.getElementById('restart-btn');
@@ -34,16 +35,17 @@ let finalScorePercentage = 0;
 let correctAnswerTally = document.getElementById('final-score');
 let finalPercentageGrade = document.getElementById('final-percentage');
 
+//Button event listeners
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
-
 });
 restartButton.addEventListener('click', restartGame);
 
 //FUNCTIONS
-//Starting the game
+
+//Playing the game
 
 function startGame() {
     startButton.classList.add('hide');
@@ -69,13 +71,11 @@ function showQuestion(question) {
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
-            
         }
             button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
         nextButton.disabled = true;
     });
-
 }
 
 function selectAnswer(e) {
@@ -93,7 +93,7 @@ function selectAnswer(e) {
         nextButton.disabled = false;
     } else {
         goToEndScreen();
-    }
+           }
 }
 
 //End (results) screen 
@@ -111,14 +111,14 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add('wrong');
            }
-    }
+}
     
     function clearStatusClass(element) {
         element.classList.remove('correct');
         element.classList.remove('wrong');
     }
 
-    //Restart Game
+//Restart Game
 
     function restartGame(){
         endScreenContainer.classList.add('hide');
@@ -131,7 +131,7 @@ function setStatusClass(element, correct) {
         startGame();
     }
 
-    //Questions dataset
+//Questions dataset
 
 const questions = [
     {

@@ -53,7 +53,7 @@ The GitHub repositroy can be accessed [here](https://github.com/elamont174/chem-
 
 - A grey background was used for the question container to provide contrast to the text. A neutral colour was used for a clean look.
 
-- The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dyslexia and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen. 
+- The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dyslexia and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen:
 ![Example of Outfit font](assets/images/outfit-font.png)
 
 ### Wireframes

@@ -34,6 +34,7 @@ button {
 }
 
 /*Opening modal screen*/
+
 .modal {
     position: fixed;
     z-index: 1;
@@ -73,8 +74,6 @@ button {
 }
 
 /*Main game*/
-
-
 
 .container {
 display: flex;
@@ -131,6 +130,7 @@ text-align: center;
 }
 
 /*Media query: (700px and above) */
+
 @media screen and (min-width: 700px) {
 .container {
         width: 800px;
