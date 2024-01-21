@@ -1,4 +1,4 @@
-# Chem Quiz
+# ChemQuiz
 
 The purpose of ChemQuiz is for GCSE Chemistry students to revise for their exams by completing a short multiple choice quiz. They would be encouraged to repeat the quiz if they received less than 70%. It is designed for Secondary school students in England.
 ![Image of website on different responsive screens](assets/images/chemquiz-responsive.png)
@@ -50,7 +50,7 @@ The site can be accessed via this [link](https://elamont174.github.io/chem-quiz/
 
 - A grey background was used for the question container to provide contrast to the text. A neutral colour was used for a clean look.
 
-- The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dysleixa and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen.
+- The font "Outfit" is a sans-serif font. Sans serif fonts are considered to be easier to read for students with dyslexia and autism - since this quiz is designed for teenagers, this was considered to be an important accessibility requirement. Outfit in particular looked clean, classic and in-keeping with the 'Science' theme of the quiz which is why it was chosen.
 
 ### Wireframes
 ![Wireframe for ChemQuiz](assets/images/chemquiz-wireframe.png)
